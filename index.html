@@ -6,81 +6,101 @@
   <title>Rishi Gupta | DevOps Engineer Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <header class="text-center py-10 bg-gray-900 text-white">
-    <h1 class="text-4xl font-bold">Rishi Gupta</h1>
-    <p class="text-lg mt-2">DevOps Engineer | AWS | Azure | Terraform | CI/CD | Kubernetes</p>
-    <div class="mt-4 space-x-4">
-      <a href="https://www.linkedin.com/in/devopsrishi" class="text-blue-400 hover:underline" target="_blank">LinkedIn</a>
-      <a href="https://github.com/Bunnyrishi" class="text-blue-400 hover:underline" target="_blank">GitHub</a>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="bg-gray-900 text-white py-12 shadow-lg">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-5xl font-extrabold mb-2">Rishi Gupta</h1>
+      <p class="text-xl text-gray-300 mb-4">
+        DevOps Engineer | AWS | Azure | Terraform | CI/CD | Kubernetes | Docker
+      </p>
+      <div class="space-x-6">
+        <a href="https://www.linkedin.com/in/devopsrishi" target="_blank" class="text-blue-400 hover:underline">LinkedIn</a>
+        <a href="https://github.com/Bunnyrishi" target="_blank" class="text-blue-400 hover:underline">GitHub</a>
+      </div>
     </div>
   </header>
 
-  <main class="max-w-4xl mx-auto p-6">
-    <section class="mb-10">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4">About Me</h2>
-      <p>
-        I’m a passionate DevOps Engineer with over 3 years of experience in designing and automating cloud infrastructure using AWS and Azure.
-        I specialize in CI/CD pipelines, container orchestration with Docker & Kubernetes, and Infrastructure as Code with Terraform.
-        My focus is on scalable, secure, and automated deployment solutions that empower engineering teams to deliver faster and more reliably.
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto p-6 space-y-12">
+
+    <!-- About Me -->
+    <section>
+      <h2 class="text-3xl font-semibold border-b-2 pb-2 mb-4">About Me</h2>
+      <p class="text-gray-700 leading-relaxed">
+        I am a results-driven DevOps Engineer with over 3 years of experience architecting and automating multi-cloud infrastructure in AWS and Azure environments. 
+        My expertise lies in designing scalable, secure, and automated CI/CD pipelines, managing containerized applications with Docker and Kubernetes, 
+        and implementing Infrastructure as Code using Terraform and Ansible. 
+        I thrive on improving deployment efficiency, ensuring reliability, and empowering engineering teams to deliver high-quality software faster.
       </p>
     </section>
 
-    <section class="mb-10">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4">Experience</h2>
-      <ul class="space-y-6">
-        <li>
-          <h3 class="font-bold text-xl">DevOps Engineer – Mobifly</h3>
-          <p class="text-sm text-gray-600">Aug 2023 – Present</p>
-          <p>
-            Migrated CI/CD pipelines from Jenkins to Azure DevOps for PwC across multi-cloud environments (AWS & Azure).
-            Automated infrastructure with Terraform, managed Docker/Kubernetes deployments, and implemented SonarQube & Veracode for code security.
-          </p>
-        </li>
-        <li>
-          <h3 class="font-bold text-xl">Systems Administrator – TechTree IT System</h3>
-          <p class="text-sm text-gray-600">May 2022 – Jul 2023</p>
-          <p>
-            Managed AWS infrastructure, Kubernetes clusters, and Jenkins CI/CD pipelines. Enhanced system reliability using Prometheus and Grafana monitoring.
-          </p>
-        </li>
+    <!-- Experience -->
+    <section>
+      <h2 class="text-3xl font-semibold border-b-2 pb-2 mb-4">Professional Experience</h2>
+      <div class="space-y-8">
+
+        <div>
+          <h3 class="text-2xl font-bold">DevOps Engineer – Mobifly</h3>
+          <p class="text-gray-500 italic mb-2">Aug 2023 – Present</p>
+          <ul class="list-disc list-inside text-gray-700 space-y-1">
+            <li>Migrated and optimized CI/CD pipelines from Jenkins to Azure DevOps across AWS and Azure for multiple enterprise clients including PwC.</li>
+            <li>Automated infrastructure provisioning using Terraform and enhanced operational efficiency through scripting and orchestration.</li>
+            <li>Managed Docker containers and Kubernetes deployments, ensuring high availability and scalable application delivery.</li>
+            <li>Implemented code quality and security checks using SonarQube and Veracode, reducing vulnerabilities in production deployments.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-bold">Systems Administrator – TechTree IT System</h3>
+          <p class="text-gray-500 italic mb-2">May 2022 – Jul 2023</p>
+          <ul class="list-disc list-inside text-gray-700 space-y-1">
+            <li>Maintained and monitored AWS infrastructure, ensuring security and reliability of production systems.</li>
+            <li>Managed Kubernetes clusters and containerized workloads with Prometheus and Grafana for effective monitoring and alerting.</li>
+            <li>Integrated Jenkins CI/CD pipelines with multiple applications (Python, Java, .NET) to automate build, test, and deployment processes.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2 class="text-3xl font-semibold border-b-2 pb-2 mb-4">Key Projects</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li><strong>PwC Multi-Cloud Migration:</strong> Streamlined deployments of .NET, Python, Java, and Node.js applications using Azure DevOps and Terraform, reducing manual effort by 50%.</li>
+        <li><strong>Tata Starbucks CI/CD Automation:</strong> Implemented Jenkins-based automation, improving release speed and efficiency by 40% across multiple services.</li>
+        <li><strong>Defense Travel System (DTS):</strong> Enhanced monitoring, security, and scalability for government workloads on AWS, ensuring 99.9% uptime.</li>
       </ul>
     </section>
 
-    <section class="mb-10">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4">Projects</h2>
-      <ul class="space-y-4">
-        <li>
-          <strong>PwC Multi-Cloud Migration:</strong> Streamlined deployment for .NET, Python, Java, and Node.js apps using Azure DevOps and Terraform.
-        </li>
-        <li>
-          <strong>Tata Starbucks – CI/CD Automation:</strong> Automated deployments with Jenkins, improving release efficiency by 40%.
-        </li>
-        <li>
-          <strong>Defense Travel System (DTS):</strong> Improved monitoring, scaling, and security for government workloads on AWS.
-        </li>
-      </ul>
-    </section>
-
-    <section class="mb-10">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4">Certifications</h2>
-      <ul class="list-disc list-inside">
+    <!-- Certifications -->
+    <section>
+      <h2 class="text-3xl font-semibold border-b-2 pb-2 mb-4">Certifications</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-1">
         <li>AWS Cloud Essentials – May 2023</li>
         <li>LinkedIn Learning: Jenkins, Terraform, Docker, DevSecOps</li>
-        <li>DevOps Beginners to Advanced with Projects</li>
+        <li>DevOps: Beginner to Advanced with Real Projects</li>
       </ul>
     </section>
 
-    <section class="mb-10">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4">Contact</h2>
-      <p>Email: <a href="mailto:rishigupta1999.rg@gmail.com" class="text-blue-600">rishigupta1999.rg@gmail.com</a></p>
-      <p>Phone: <a href="tel:+917007509087" class="text-blue-600">+91 7007509087</a></p>
-      <p>Location: Gurugram, Haryana, India</p>
+    <!-- Contact -->
+    <section>
+      <h2 class="text-3xl font-semibold border-b-2 pb-2 mb-4">Contact</h2>
+      <ul class="text-gray-700 space-y-1">
+        <li>Email: <a href="mailto:rishigupta1999.rg@gmail.com" class="text-blue-600 hover:underline">rishigupta1999.rg@gmail.com</a></li>
+        <li>Phone: <a href="tel:+917007509087" class="text-blue-600 hover:underline">+91 7007509087</a></li>
+        <li>Location: Gurugram, Haryana, India</li>
+      </ul>
     </section>
+
   </main>
 
-  <footer class="text-center py-6 bg-gray-900 text-gray-400">
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-6 text-center mt-12">
     <p>© 2025 Rishi Gupta. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
