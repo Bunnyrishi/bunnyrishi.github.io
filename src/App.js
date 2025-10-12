@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhone, FaDownload, FaExternalLinkAlt, FaTimes, FaBars, FaMapMarkerAlt } from "react-icons/fa";
-import { SiAws, SiDocker, SiKubernetes, SiTerraform, SiJenkins, SiAzuredevops, SiPrometheus, SiGrafana } from "react-icons/si";
+import { SiAmazonaws, SiDocker, SiKubernetes, SiTerraform, SiJenkins, SiAzuredevops, SiPrometheus, SiGrafana } from "react-icons/si";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('hero');
@@ -24,7 +24,7 @@ export default function App() {
   ];
 
   const skills = [
-    { name: "AWS", icon: SiAws, level: 90, color: "#FF9900" },
+    { name: "AWS", icon: SiAmazonaws, level: 90, color: "#FF9900" },
     { name: "Docker", icon: SiDocker, level: 95, color: "#2496ED" },
     { name: "Kubernetes", icon: SiKubernetes, level: 85, color: "#326CE5" },
     { name: "Terraform", icon: SiTerraform, level: 90, color: "#7B42BC" },
