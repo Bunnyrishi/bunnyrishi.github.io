@@ -247,7 +247,7 @@ export default function App() {
                   onClick={() => scrollToSection('contact')}
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
                 >
-                  Hire Me
+                  Contact Me
                 </button>
                 <a
                   href="/assets/resume.pdf"
