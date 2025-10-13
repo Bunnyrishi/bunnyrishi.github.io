@@ -1,12 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhone, FaDownload, FaExternalLinkAlt, FaTimes, FaBars, FaMapMarkerAlt } from "react-icons/fa";
 import { SiAmazonaws, SiDocker, SiKubernetes, SiTerraform, SiJenkins, SiAzuredevops, SiPrometheus, SiGrafana } from "react-icons/si";
+import emailjs from '@emailjs/browser';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('hero');
   const [selectedCert, setSelectedCert] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState('');
+  const form = useRef();
 
   const certificates = [
     { name: "AWS Cloud Essentials", image: "/assets/certificates/AWS_CloudEssentials-Badge.jpg" },
@@ -120,6 +125,27 @@ export default function App() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('');
+
+    try {
+      await emailjs.sendForm(
+        'service_ir3suz9',
+        'template_czxij9q',
+        form.current,
+        '1bhY8-ykAwGVZNtXN'
+      );
+      setSubmitStatus('Message sent successfully! I\'ll get back to you soon.');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      setSubmitStatus('Failed to send message. Please try again or contact me directly.');
+    }
+    
+    setIsSubmitting(false);
+  };
 
   const SkillCircle = ({ skill }) => {
     const radius = 45;
@@ -604,36 +630,56 @@ export default function App() {
               viewport={{ once: true }}
               className="bg-white rounded-xl shadow-lg p-8"
             >
-              <form className="space-y-6">
+              <form ref={form} onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
                   <input
                     type="text"
+                    name="user_name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({...formData, name: e.target.value})}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Your Name"
+                    required
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
                   <input
                     type="email"
+                    name="user_email"
+                    value={formData.email}
+                    onChange={(e) => setFormData({...formData, email: e.target.value})}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="your.email@example.com"
+                    required
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
                   <textarea
                     rows="4"
+                    name="message"
+                    value={formData.message}
+                    onChange={(e) => setFormData({...formData, message: e.target.value})}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Your message..."
+                    required
                   ></textarea>
                 </div>
+                {submitStatus && (
+                  <div className={`text-center p-3 rounded-lg ${
+                    submitStatus.includes('success') ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
+                  }`}>
+                    {submitStatus}
+                  </div>
+                )}
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </motion.div>
