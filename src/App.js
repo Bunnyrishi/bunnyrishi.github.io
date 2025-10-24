@@ -236,13 +236,13 @@ function Portfolio() {
   return (
     <div className="min-h-screen bg-white">
       {/* Fixed Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+              className="text-2xl font-bold text-white"
             >
               Rishi Gupta
             </motion.div>
@@ -255,8 +255,8 @@ function Portfolio() {
                   onClick={() => scrollToSection(item.id)}
                   className={`px-4 py-2 rounded-lg font-bold transition-all duration-300 ${
                     activeSection === item.id
-                      ? 'text-blue-600 bg-blue-50'
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                      ? 'text-blue-400 bg-white/20 backdrop-blur-sm'
+                      : 'text-white hover:text-blue-400 hover:bg-white/10'
                   }`}
                 >
                   {item.label}
@@ -269,7 +269,7 @@ function Portfolio() {
               className="md:hidden p-2"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
-              <FaBars className="text-xl text-gray-700" />
+              <FaBars className="text-xl text-white" />
             </button>
           </div>
 
@@ -284,7 +284,7 @@ function Portfolio() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg"
+                  className="block w-full text-left px-4 py-2 text-white hover:text-blue-400 hover:bg-white/10 rounded-lg"
                 >
                   {item.label}
                 </button>
