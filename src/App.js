@@ -288,12 +288,12 @@ function Portfolio() {
       </header>
 
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 pt-20 relative overflow-hidden">
+      <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 pt-20 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-400/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-indigo-400/10 rounded-full blur-3xl animate-bounce"></div>
-          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-slate-400/10 rounded-full blur-2xl animate-ping"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-300/30 rounded-full blur-3xl animate-bounce"></div>
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-white/15 rounded-full blur-2xl animate-ping"></div>
         </div>
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -303,9 +303,9 @@ function Portfolio() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 relative z-10">
-                Hi, I'm <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent animate-pulse">Rishi Gupta</span>
+                Hi, I'm <span className="bg-gradient-to-r from-yellow-300 to-white bg-clip-text text-transparent animate-pulse">Rishi Gupta</span>
               </h1>
-              <h2 className="text-2xl md:text-3xl text-blue-300 mb-6 font-semibold animate-bounce">⚙️ DevOps Engineer</h2>
+              <h2 className="text-2xl md:text-3xl text-cyan-200 mb-6 font-semibold animate-bounce">⚙️ DevOps Engineer</h2>
               <p className="text-lg text-white/90 mb-8 leading-relaxed relative z-10">
                 🚀 Transforming infrastructure with cloud automation, CI/CD excellence, and scalable solutions. 
                 ☁️ 3+ years of experience in AWS, Azure, Kubernetes, and modern DevOps practices.
@@ -313,14 +313,14 @@ function Portfolio() {
               <div className="flex flex-wrap gap-4">
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-2xl transform hover:scale-110 transition-all duration-300 hover:from-blue-700 hover:to-indigo-700 relative z-10"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-2xl transform hover:scale-110 transition-all duration-300 hover:from-cyan-600 hover:to-blue-600 relative z-10"
                 >
                   💬 Contact Me
                 </button>
                 <a
                   href="/Rishi_Gupta_Resume.pdf"
                   download="Rishi_Gupta_Resume.pdf"
-                  className="border-2 border-blue-300 text-blue-300 px-8 py-3 rounded-lg font-semibold hover:bg-blue-300 hover:text-slate-900 transition-all duration-300 flex items-center gap-2 relative z-10 hover:shadow-xl transform hover:scale-105"
+                  className="border-2 border-cyan-300 text-cyan-300 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-300 hover:text-blue-900 transition-all duration-300 flex items-center gap-2 relative z-10 hover:shadow-xl transform hover:scale-105"
                 >
                   <FaDownload /> 📄 Download Resume
                 </a>
@@ -333,14 +333,14 @@ function Portfolio() {
               className="flex justify-center"
             >
               <div className="relative">
-                <div className="w-80 h-80 rounded-full bg-gradient-to-br from-blue-500 via-indigo-500 to-slate-600 p-2 hover:scale-105 transition-all duration-500">
+                <div className="w-80 h-80 rounded-full bg-gradient-to-br from-cyan-400 via-blue-500 to-indigo-600 p-2 hover:scale-105 transition-all duration-500">
                   <img
                     src="/assets/images/rishi_image.jpg"
                     alt="Rishi Gupta"
                     className="w-full h-full object-cover rounded-full hover:scale-110 transition-transform duration-300"
                   />
                 </div>
-                <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full flex items-center justify-center animate-bounce shadow-lg">
+                <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center animate-bounce shadow-lg">
                   <span className="text-2xl">👋</span>
                 </div>
               </div>
@@ -409,8 +409,8 @@ function Portfolio() {
                   <p className="text-emerald-100">Faster CI/CD Pipelines</p>
                 </div>
                 <div className="text-center p-4 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-lg text-white transform hover:scale-105 transition-all duration-300 shadow-lg">
-                  <h4 className="text-2xl font-bold">⚓ 20+</h4>
-                  <p className="text-indigo-100">K8s Clusters Managed</p>
+                  <h4 className="text-2xl font-bold text-white">⚓ 20+</h4>
+                  <p className="text-white font-medium">K8s Clusters Managed</p>
                 </div>
               </div>
             </motion.div>
