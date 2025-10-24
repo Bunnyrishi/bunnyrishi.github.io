@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FaLinkedin, FaGithub, FaEnvelope, FaPhone, FaDownload, FaExternalLinkAlt, FaTimes, FaBars, FaMapMarkerAlt } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope, FaPhone, FaDownload, FaExternalLinkAlt, FaTimes, FaBars, FaMapMarkerAlt, FaBlog } from "react-icons/fa";
 import { SiAmazonaws, SiDocker, SiKubernetes, SiTerraform, SiJenkins, SiAzuredevops, SiPrometheus, SiGrafana } from "react-icons/si";
 import emailjs from '@emailjs/browser';
 import LinkedInProfile from './LinkedInProfile';
@@ -784,6 +784,14 @@ function Portfolio() {
                   className="w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-900 text-white rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg animate-bounce"
                 >
                   <FaGithub />
+                </a>
+                <a
+                  href="https://bunnyrishi.github.io/devops-blog"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 text-white rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg animate-bounce"
+                >
+                  <FaBlog />
                 </a>
               </div>
             </motion.div>
