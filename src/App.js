@@ -288,7 +288,7 @@ function Portfolio() {
       </header>
 
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 pt-20 relative overflow-hidden">
+      <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-400 via-sky-500 to-indigo-500 pt-20 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/20 rounded-full blur-3xl animate-pulse"></div>
@@ -321,16 +321,16 @@ function Portfolio() {
               <div className="flex flex-wrap gap-4">
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:shadow-2xl transform hover:scale-110 transition-all duration-300 hover:from-cyan-600 hover:to-blue-700 relative z-10 animate-pulse hover:animate-none"
+                  className="bg-white text-blue-800 px-10 py-4 rounded-full font-bold text-lg hover:shadow-2xl transform hover:scale-110 transition-all duration-300 hover:bg-blue-50 relative z-10"
                 >
                   💬 Contact Me
                 </button>
                 <a
                   href="/Rishi_Gupta_Resume.pdf"
                   download="Rishi_Gupta_Resume.pdf"
-                  className="border-3 border-cyan-300 text-cyan-300 px-10 py-4 rounded-full font-bold text-lg hover:bg-cyan-300 hover:text-purple-900 transition-all duration-300 flex items-center gap-3 relative z-10 hover:shadow-xl transform hover:scale-105"
+                  className="bg-white text-blue-800 px-10 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all duration-300 flex items-center gap-3 relative z-10 hover:bg-blue-50 transform hover:scale-110"
                 >
-                  <FaDownload className="animate-bounce" /> 📄 Download Resume
+                  <FaDownload /> 📄 Download Resume
                 </a>
               </div>
             </motion.div>
@@ -430,8 +430,7 @@ function Portfolio() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 bg-gradient-to-br from-slate-800 via-gray-800 to-blue-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section id="skills" className="py-20 bg-gradient-to-br from-gray-900 via-slate-800 to-indigo-900 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -440,8 +439,8 @@ function Portfolio() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4 relative z-10">⚡ Technical Skills</h2>
-            <p className="text-lg text-slate-300 relative z-10">🛠️ Technologies I work with</p>
+            <h2 className="text-4xl font-bold text-white mb-4">⚡ Technical Skills</h2>
+            <p className="text-lg text-gray-300">🛠️ Technologies I work with</p>
           </motion.div>
           
           <div className="grid md:grid-cols-4 gap-8">
@@ -697,7 +696,7 @@ function Portfolio() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gradient-to-br from-slate-700 via-blue-800 to-indigo-800 relative overflow-hidden">
+      <section id="contact" className="py-20 bg-gradient-to-br from-gray-800 via-slate-700 to-blue-800 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-32 h-32 bg-blue-400/10 rounded-full blur-xl animate-pulse"></div>
           <div className="absolute bottom-10 right-10 w-40 h-40 bg-slate-400/10 rounded-full blur-2xl animate-bounce"></div>
@@ -710,8 +709,8 @@ function Portfolio() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4 relative z-10">💬 Get In Touch</h2>
-            <p className="text-lg text-white/90 relative z-10">🚀 Let's discuss your next project</p>
+            <h2 className="text-4xl font-bold text-white mb-4">💬 Get In Touch</h2>
+            <p className="text-lg text-gray-300">🚀 Let's discuss your next project</p>
           </motion.div>
           
           <div className="grid md:grid-cols-2 gap-12">
