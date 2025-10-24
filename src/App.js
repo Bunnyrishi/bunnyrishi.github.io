@@ -288,12 +288,14 @@ function Portfolio() {
       </header>
 
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-sky-400 via-sky-600 to-blue-700 pt-20 relative overflow-hidden">
+      <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 pt-20 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-sky-300/30 rounded-full blur-3xl animate-bounce"></div>
-          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-white/15 rounded-full blur-2xl animate-ping"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-400/30 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-pink-400/20 rounded-full blur-3xl animate-bounce"></div>
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-yellow-300/20 rounded-full blur-2xl animate-ping"></div>
+          <div className="absolute top-20 right-20 w-32 h-32 bg-blue-400/25 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute bottom-32 left-32 w-48 h-48 bg-green-400/15 rounded-full blur-2xl animate-bounce"></div>
         </div>
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -302,10 +304,18 @@ function Portfolio() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 relative z-10">
-                Hi, I'm <span className="text-white animate-pulse">Rishi Gupta</span>
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 relative z-10">
+                Hi, I'm <span className="bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent animate-pulse">Rishi Gupta</span>
               </h1>
-              <h2 className="text-2xl md:text-3xl text-sky-200 mb-6 font-semibold animate-bounce">⚙️ DevOps Engineer</h2>
+              <h2 className="text-3xl md:text-4xl text-cyan-200 mb-6 font-semibold animate-bounce">⚙️ DevOps Engineer</h2>
+              <div className="flex items-center gap-4 mb-8">
+                <div className="flex -space-x-2">
+                  <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white text-sm font-bold animate-bounce">AWS</div>
+                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold animate-bounce" style={{animationDelay: '0.1s'}}>K8s</div>
+                  <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold animate-bounce" style={{animationDelay: '0.2s'}}>TF</div>
+                </div>
+                <span className="text-cyan-200 text-lg">3+ Years Experience</span>
+              </div>
               <p className="text-lg text-white/90 mb-8 leading-relaxed relative z-10">
                 🚀 Transforming infrastructure with cloud automation, CI/CD excellence, and scalable solutions. 
                 ☁️ 3+ years of experience in AWS, Azure, Kubernetes, and modern DevOps practices.
@@ -313,16 +323,16 @@ function Portfolio() {
               <div className="flex flex-wrap gap-4">
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="bg-white text-sky-800 px-8 py-3 rounded-lg font-semibold hover:shadow-2xl transform hover:scale-110 transition-all duration-300 hover:bg-sky-100 relative z-10"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:shadow-2xl transform hover:scale-110 transition-all duration-300 hover:from-cyan-600 hover:to-blue-700 relative z-10 animate-pulse hover:animate-none"
                 >
                   💬 Contact Me
                 </button>
                 <a
                   href="/Rishi_Gupta_Resume.pdf"
                   download="Rishi_Gupta_Resume.pdf"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-sky-800 transition-all duration-300 flex items-center gap-2 relative z-10 hover:shadow-xl transform hover:scale-105"
+                  className="border-3 border-cyan-300 text-cyan-300 px-10 py-4 rounded-full font-bold text-lg hover:bg-cyan-300 hover:text-purple-900 transition-all duration-300 flex items-center gap-3 relative z-10 hover:shadow-xl transform hover:scale-105"
                 >
-                  <FaDownload /> 📄 Download Resume
+                  <FaDownload className="animate-bounce" /> 📄 Download Resume
                 </a>
               </div>
             </motion.div>
@@ -333,15 +343,18 @@ function Portfolio() {
               className="flex justify-center"
             >
               <div className="relative">
-                <div className="w-80 h-80 rounded-full bg-gradient-to-br from-sky-400 via-blue-500 to-indigo-600 p-2 hover:scale-105 transition-all duration-500">
+                <div className="w-80 h-80 rounded-full bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 p-3 hover:scale-105 transition-all duration-500 shadow-2xl">
                   <img
                     src="/assets/images/rishi_image.jpg"
                     alt="Rishi Gupta"
                     className="w-full h-full object-cover rounded-full hover:scale-110 transition-transform duration-300"
                   />
                 </div>
-                <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center animate-bounce shadow-lg">
-                  <span className="text-2xl">👋</span>
+                <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center animate-bounce shadow-2xl">
+                  <span className="text-3xl">👋</span>
+                </div>
+                <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center animate-pulse shadow-xl">
+                  <span className="text-xl">🚀</span>
                 </div>
               </div>
             </motion.div>
@@ -460,7 +473,7 @@ function Portfolio() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-slate-700 to-blue-600 bg-clip-text text-transparent mb-4">🚀 Featured Projects</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">🚀 Featured Projects</h2>
             <p className="text-lg text-gray-600">Some of my recent work</p>
           </motion.div>
           
@@ -535,7 +548,7 @@ function Portfolio() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-slate-700 to-blue-600 bg-clip-text text-transparent mb-4">💼 Work Experience</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">💼 Work Experience</h2>
             <p className="text-lg text-gray-600">My professional journey</p>
           </motion.div>
           
