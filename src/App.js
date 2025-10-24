@@ -288,11 +288,11 @@ function Portfolio() {
       </header>
 
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 pt-20 relative overflow-hidden">
+      <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-sky-400 via-sky-600 to-blue-700 pt-20 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-300/30 rounded-full blur-3xl animate-bounce"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-sky-300/30 rounded-full blur-3xl animate-bounce"></div>
           <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-white/15 rounded-full blur-2xl animate-ping"></div>
         </div>
         <div className="max-w-7xl mx-auto px-6 py-20">
@@ -305,7 +305,7 @@ function Portfolio() {
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 relative z-10">
                 Hi, I'm <span className="bg-gradient-to-r from-yellow-300 to-white bg-clip-text text-transparent animate-pulse">Rishi Gupta</span>
               </h1>
-              <h2 className="text-2xl md:text-3xl text-cyan-200 mb-6 font-semibold animate-bounce">⚙️ DevOps Engineer</h2>
+              <h2 className="text-2xl md:text-3xl text-sky-200 mb-6 font-semibold animate-bounce">⚙️ DevOps Engineer</h2>
               <p className="text-lg text-white/90 mb-8 leading-relaxed relative z-10">
                 🚀 Transforming infrastructure with cloud automation, CI/CD excellence, and scalable solutions. 
                 ☁️ 3+ years of experience in AWS, Azure, Kubernetes, and modern DevOps practices.
@@ -313,14 +313,14 @@ function Portfolio() {
               <div className="flex flex-wrap gap-4">
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-2xl transform hover:scale-110 transition-all duration-300 hover:from-cyan-600 hover:to-blue-600 relative z-10"
+                  className="bg-gradient-to-r from-sky-500 to-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-2xl transform hover:scale-110 transition-all duration-300 hover:from-sky-600 hover:to-blue-600 relative z-10"
                 >
                   💬 Contact Me
                 </button>
                 <a
                   href="/Rishi_Gupta_Resume.pdf"
                   download="Rishi_Gupta_Resume.pdf"
-                  className="border-2 border-cyan-300 text-cyan-300 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-300 hover:text-blue-900 transition-all duration-300 flex items-center gap-2 relative z-10 hover:shadow-xl transform hover:scale-105"
+                  className="border-2 border-sky-300 text-sky-300 px-8 py-3 rounded-lg font-semibold hover:bg-sky-300 hover:text-blue-900 transition-all duration-300 flex items-center gap-2 relative z-10 hover:shadow-xl transform hover:scale-105"
                 >
                   <FaDownload /> 📄 Download Resume
                 </a>
@@ -333,7 +333,7 @@ function Portfolio() {
               className="flex justify-center"
             >
               <div className="relative">
-                <div className="w-80 h-80 rounded-full bg-gradient-to-br from-cyan-400 via-blue-500 to-indigo-600 p-2 hover:scale-105 transition-all duration-500">
+                <div className="w-80 h-80 rounded-full bg-gradient-to-br from-sky-400 via-blue-500 to-indigo-600 p-2 hover:scale-105 transition-all duration-500">
                   <img
                     src="/assets/images/rishi_image.jpg"
                     alt="Rishi Gupta"
@@ -396,17 +396,17 @@ function Portfolio() {
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-6">
-                <div className="text-center p-4 bg-gradient-to-br from-slate-600 to-blue-600 rounded-lg text-white transform hover:scale-105 transition-all duration-300 shadow-lg">
+                <div className="text-center p-4 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg text-white transform hover:scale-105 transition-all duration-300 shadow-lg">
                   <h4 className="text-2xl font-bold">🚀 50+</h4>
-                  <p className="text-slate-100">Successful Deployments</p>
+                  <p className="text-blue-100">Successful Deployments</p>
                 </div>
                 <div className="text-center p-4 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg text-white transform hover:scale-105 transition-all duration-300 shadow-lg">
                   <h4 className="text-2xl font-bold">⚡ 99.9%</h4>
                   <p className="text-blue-100">Uptime Achieved</p>
                 </div>
-                <div className="text-center p-4 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-lg text-white transform hover:scale-105 transition-all duration-300 shadow-lg">
+                <div className="text-center p-4 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg text-white transform hover:scale-105 transition-all duration-300 shadow-lg">
                   <h4 className="text-2xl font-bold">📈 60%</h4>
-                  <p className="text-emerald-100">Faster CI/CD Pipelines</p>
+                  <p className="text-blue-100">Faster CI/CD Pipelines</p>
                 </div>
                 <div className="text-center p-4 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-lg text-white transform hover:scale-105 transition-all duration-300 shadow-lg">
                   <h4 className="text-2xl font-bold text-white">⚓ 20+</h4>
