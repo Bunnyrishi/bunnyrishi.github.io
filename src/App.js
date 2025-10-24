@@ -59,8 +59,8 @@ function Portfolio() {
       github: "https://github.com/Bunnyrishi/cicd-migration",
       live: "/pipeline-demo.html",
       duration: "2 months",
-      team: "Team of 3",
-      metrics: "60% faster deployments, 50+ apps migrated"
+      team: "Solo Project",
+      metrics: "87% faster deployments, 50+ apps migrated"
     },
     {
       title: "Kubernetes Monitoring Stack",
@@ -71,6 +71,16 @@ function Portfolio() {
       duration: "1 month",
       team: "Solo Project",
       metrics: "20+ clusters monitored, 99.5% alert accuracy"
+    },
+    {
+      title: "Server Migration Project",
+      description: "Migrated 20+ applications from non-prod to prod Linux servers (x86 to ARM64) and Windows 2019 to 2022. Zero downtime migration with performance optimization.",
+      technologies: ["Linux", "ARM64", "Windows Server 2022", "Docker", "PowerShell"],
+      github: "https://github.com/Bunnyrishi/server-migration",
+      live: "/migration-demo.html",
+      duration: "2 months",
+      team: "Solo Project",
+      metrics: "20+ servers migrated, 0% downtime, 30% performance boost"
     },
     {
       title: "DevOps Portfolio Website",
@@ -443,7 +453,7 @@ function Portfolio() {
             <p className="text-lg text-gray-600">Some of my recent work</p>
           </motion.div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <motion.div
                 key={index}
@@ -453,7 +463,12 @@ function Portfolio() {
                 viewport={{ once: true }}
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 overflow-hidden"
               >
-                <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-600 relative">
+                <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-600 relative" style={{
+                  backgroundImage: project.team === 'Solo Project' ? 'url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=200&fit=crop&crop=center")' : 'none',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundBlendMode: 'overlay'
+                }}>
                   <div className="absolute top-4 right-4 bg-white bg-opacity-90 px-2 py-1 rounded text-xs font-medium text-gray-700">
                     {project.duration}
                   </div>

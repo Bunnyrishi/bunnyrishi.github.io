@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubernetes Monitoring Demo - Rishi Gupta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-600 text-white p-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Kubernetes Monitoring Stack</h1>
+            <a href="/" class="bg-white text-blue-600 px-4 py-2 rounded hover:bg-gray-100">← Back to Portfolio</a>
+        </div>
+    </header>
+
+    <div class="max-w-6xl mx-auto p-6">
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-6">
+            <h2 class="text-3xl font-bold mb-4">📊 Prometheus + Grafana Monitoring</h2>
+            <p class="text-gray-600 mb-6">Comprehensive monitoring and alerting for Kubernetes clusters with real-time dashboards</p>
+            
+            <div class="grid md:grid-cols-4 gap-4 mb-8">
+                <div class="bg-green-50 p-4 rounded-lg text-center">
+                    <h3 class="font-bold text-green-800">Clusters Monitored</h3>
+                    <p class="text-3xl font-bold text-green-600">20+</p>
+                </div>
+                <div class="bg-blue-50 p-4 rounded-lg text-center">
+                    <h3 class="font-bold text-blue-800">Alert Accuracy</h3>
+                    <p class="text-3xl font-bold text-blue-600">99.5%</p>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-lg text-center">
+                    <h3 class="font-bold text-purple-800">Metrics Collected</h3>
+                    <p class="text-3xl font-bold text-purple-600">500+</p>
+                </div>
+                <div class="bg-orange-50 p-4 rounded-lg text-center">
+                    <h3 class="font-bold text-orange-800">Response Time</h3>
+                    <p class="text-3xl font-bold text-orange-600">&lt;2min</p>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                <h3 class="text-xl font-bold mb-4">🎯 Monitoring Capabilities</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Real-time cluster health monitoring</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Resource utilization tracking</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Application performance metrics</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Custom alerting rules</li>
+                    </ul>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Multi-cluster dashboard views</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Historical data analysis</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Automated incident response</li>
+                        <li class="flex items-center gap-2"><span class="text-green-500">✓</span> Integration with Slack/Teams</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white border-2 border-blue-200 p-6 rounded-lg">
+                    <h4 class="font-bold text-blue-800 mb-3">📈 Prometheus Metrics</h4>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>CPU Usage</span>
+                            <span class="font-bold text-green-600">68%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Memory Usage</span>
+                            <span class="font-bold text-yellow-600">72%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Disk I/O</span>
+                            <span class="font-bold text-green-600">45%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Network Traffic</span>
+                            <span class="font-bold text-blue-600">1.2GB/s</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white border-2 border-green-200 p-6 rounded-lg">
+                    <h4 class="font-bold text-green-800 mb-3">🚨 Active Alerts</h4>
+                    <div class="space-y-2 text-sm">
+                        <div class="bg-green-50 p-2 rounded">
+                            <span class="text-green-600 font-bold">✓ All systems normal</span>
+                        </div>
+                        <div class="bg-yellow-50 p-2 rounded">
+                            <span class="text-yellow-600">⚠ High memory on node-3</span>
+                        </div>
+                        <div class="bg-blue-50 p-2 rounded">
+                            <span class="text-blue-600">ℹ Scheduled maintenance</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white border-2 border-purple-200 p-6 rounded-lg">
+                    <h4 class="font-bold text-purple-800 mb-3">📊 Grafana Dashboards</h4>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>Cluster Overview</span>
+                            <span class="text-green-500">●</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Node Details</span>
+                            <span class="text-green-500">●</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Pod Metrics</span>
+                            <span class="text-green-500">●</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Application Health</span>
+                            <span class="text-green-500">●</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
