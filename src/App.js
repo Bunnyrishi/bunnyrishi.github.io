@@ -47,7 +47,7 @@ function Portfolio() {
       description: "Automated infrastructure provisioning across AWS and Azure using Terraform modules with 99.9% uptime and 50% cost reduction.",
       technologies: ["Terraform", "AWS", "Azure", "Docker"],
       github: "https://github.com/Bunnyrishi/terraform-multi-cloud",
-      live: "https://demo-infra.bunnyrishi.dev",
+      live: "/demo-infra.html",
       duration: "3 months",
       team: "Solo Project",
       metrics: "99.9% uptime, 50% cost reduction"
@@ -57,7 +57,7 @@ function Portfolio() {
       description: "Migrated legacy Jenkins pipelines to Azure DevOps with enhanced security, achieving 60% faster deployments.",
       technologies: ["Azure DevOps", "Jenkins", "Docker", "Kubernetes"],
       github: "https://github.com/Bunnyrishi/cicd-migration",
-      live: "https://pipeline-demo.bunnyrishi.dev",
+      live: "/pipeline-demo.html",
       duration: "2 months",
       team: "Team of 3",
       metrics: "60% faster deployments, 50+ apps migrated"
@@ -67,7 +67,7 @@ function Portfolio() {
       description: "Implemented comprehensive monitoring and alerting for Kubernetes clusters with real-time dashboards.",
       technologies: ["Prometheus", "Grafana", "Kubernetes", "Helm"],
       github: "https://github.com/Bunnyrishi/k8s-monitoring",
-      live: "https://monitoring-demo.bunnyrishi.dev",
+      live: "/monitoring-demo.html",
       duration: "1 month",
       team: "Solo Project",
       metrics: "20+ clusters monitored, 99.5% alert accuracy"
@@ -232,7 +232,7 @@ function Portfolio() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                  className={`px-4 py-2 rounded-lg font-bold transition-all duration-300 ${
                     activeSection === item.id
                       ? 'text-blue-600 bg-blue-50'
                       : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'

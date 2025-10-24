@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI/CD Pipeline Demo - Rishi Gupta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-600 text-white p-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">CI/CD Pipeline Migration Dashboard</h1>
+            <a href="/" class="bg-white text-blue-600 px-4 py-2 rounded hover:bg-gray-100">← Back to Portfolio</a>
+        </div>
+    </header>
+
+    <div class="max-w-6xl mx-auto p-6">
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-6">
+            <h2 class="text-3xl font-bold mb-4">🔄 Jenkins to Azure DevOps Migration</h2>
+            <p class="text-gray-600 mb-6">Comprehensive CI/CD pipeline migration with enhanced security and performance</p>
+            
+            <div class="grid md:grid-cols-4 gap-4 mb-8">
+                <div class="bg-green-50 p-4 rounded-lg text-center">
+                    <h3 class="font-bold text-green-800">Apps Migrated</h3>
+                    <p class="text-3xl font-bold text-green-600">50+</p>
+                </div>
+                <div class="bg-blue-50 p-4 rounded-lg text-center">
+                    <h3 class="font-bold text-blue-800">Speed Improvement</h3>
+                    <p class="text-3xl font-bold text-blue-600">60%</p>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-lg text-center">
+                    <h3 class="font-bold text-purple-800">Zero Downtime</h3>
+                    <p class="text-3xl font-bold text-purple-600">100%</p>
+                </div>
+                <div class="bg-orange-50 p-4 rounded-lg text-center">
+                    <h3 class="font-bold text-orange-800">Success Rate</h3>
+                    <p class="text-3xl font-bold text-orange-600">99.8%</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-red-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4 text-red-800">📊 Before (Jenkins)</h3>
+                    <ul class="space-y-2 text-red-700">
+                        <li>• Average deployment time: 45 minutes</li>
+                        <li>• Manual intervention required</li>
+                        <li>• Limited security scanning</li>
+                        <li>• Complex maintenance</li>
+                        <li>• Inconsistent environments</li>
+                    </ul>
+                </div>
+                <div class="bg-green-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4 text-green-800">🚀 After (Azure DevOps)</h3>
+                    <ul class="space-y-2 text-green-700">
+                        <li>• Average deployment time: 18 minutes</li>
+                        <li>• Fully automated pipelines</li>
+                        <li>• Integrated security scanning</li>
+                        <li>• Simplified maintenance</li>
+                        <li>• Consistent environments</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-6">
+            <h3 class="text-xl font-bold mb-4">🔧 Pipeline Features</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-2xl">🔒</span>
+                    </div>
+                    <h4 class="font-bold">Security First</h4>
+                    <p class="text-sm text-gray-600">Integrated security scanning and compliance checks</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-2xl">⚡</span>
+                    </div>
+                    <h4 class="font-bold">Fast Deployment</h4>
+                    <p class="text-sm text-gray-600">Parallel processing and optimized build times</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-2xl">📊</span>
+                    </div>
+                    <h4 class="font-bold">Real-time Monitoring</h4>
+                    <p class="text-sm text-gray-600">Comprehensive logging and performance metrics</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <h3 class="text-xl font-bold mb-6">📝 Sample Pipeline YAML Configurations</h3>
+            
+            <!-- Environment Variables -->
+            <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                <h4 class="font-bold mb-3">🌍 Environment Variables</h4>
+                <div class="grid md:grid-cols-3 gap-4 text-sm">
+                    <div class="bg-blue-50 p-3 rounded">
+                        <h5 class="font-bold text-blue-800">DEV Environment</h5>
+                        <p class="text-blue-600">• API_URL: dev-api.company.com</p>
+                        <p class="text-blue-600">• DB_HOST: dev-db.internal</p>
+                    </div>
+                    <div class="bg-yellow-50 p-3 rounded">
+                        <h5 class="font-bold text-yellow-800">UAT Environment</h5>
+                        <p class="text-yellow-600">• API_URL: uat-api.company.com</p>
+                        <p class="text-yellow-600">• DB_HOST: uat-db.internal</p>
+                    </div>
+                    <div class="bg-green-50 p-3 rounded">
+                        <h5 class="font-bold text-green-800">PROD Environment</h5>
+                        <p class="text-green-600">• API_URL: api.company.com</p>
+                        <p class="text-green-600">• DB_HOST: prod-db.internal</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pipeline Tabs -->
+            <div class="mb-4">
+                <div class="flex space-x-1 bg-gray-100 p-1 rounded-lg">
+                    <button onclick="showPipeline('java')" id="java-tab" class="px-4 py-2 rounded-md bg-white shadow text-blue-600 font-medium">☕ Java</button>
+                    <button onclick="showPipeline('python')" id="python-tab" class="px-4 py-2 rounded-md text-gray-600 hover:text-blue-600">🐍 Python</button>
+                    <button onclick="showPipeline('dotnet')" id="dotnet-tab" class="px-4 py-2 rounded-md text-gray-600 hover:text-blue-600">🔷 .NET Core</button>
+                </div>
+            </div>
+
+            <!-- Java Pipeline -->
+            <div id="java-pipeline" class="pipeline-content">
+                <h4 class="font-bold mb-3 text-orange-600">☕ Java Spring Boot Pipeline</h4>
+                <pre class="bg-gray-900 text-green-400 p-4 rounded-lg text-sm overflow-x-auto"><code>trigger:
+  branches:
+    include:
+    - main
+    - develop
+
+variables:
+  - group: 'java-app-variables'
+  - name: 'buildConfiguration'
+    value: 'Release'
+
+stages:
+- stage: Build
+  jobs:
+  - job: BuildJava
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - task: JavaToolInstaller@0
+      inputs:
+        versionSpec: '11'
+        jdkArchitectureOption: 'x64'
+        jdkSourceOption: 'PreInstalled'
+    
+    - task: Maven@3
+      inputs:
+        mavenPomFile: 'pom.xml'
+        goals: 'clean compile test package'
+        options: '-Dmaven.test.failure.ignore=true'
+    
+    - task: PublishTestResults@2
+      inputs:
+        testResultsFormat: 'JUnit'
+        testResultsFiles: '**/surefire-reports/TEST-*.xml'
+
+- stage: DeployDev
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/develop')
+  variables:
+    environment: 'dev'
+    apiUrl: '$(DEV_API_URL)'
+    dbHost: '$(DEV_DB_HOST)'
+  jobs:
+  - deployment: DeployToDev
+    environment: 'dev'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureWebApp@1
+            inputs:
+              azureSubscription: '$(azureSubscription)'
+              appName: 'java-app-dev'
+              package: '$(Pipeline.Workspace)/**/*.jar'
+
+- stage: DeployUAT
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
+  variables:
+    environment: 'uat'
+    apiUrl: '$(UAT_API_URL)'
+    dbHost: '$(UAT_DB_HOST)'
+  jobs:
+  - deployment: DeployToUAT
+    environment: 'uat'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureWebApp@1
+            inputs:
+              azureSubscription: '$(azureSubscription)'
+              appName: 'java-app-uat'
+              package: '$(Pipeline.Workspace)/**/*.jar'
+
+- stage: DeployProd
+  condition: and(eq(variables['Build.SourceBranch'], 'refs/heads/main'), eq(variables['Build.Reason'], 'Manual'))
+  variables:
+    environment: 'prod'
+    apiUrl: '$(PROD_API_URL)'
+    dbHost: '$(PROD_DB_HOST)'
+  jobs:
+  - deployment: DeployToProd
+    environment: 'prod'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureWebApp@1
+            inputs:
+              azureSubscription: '$(azureSubscription)'
+              appName: 'java-app-prod'
+              package: '$(Pipeline.Workspace)/**/*.jar'</code></pre>
+            </div>
+
+            <!-- Python Pipeline -->
+            <div id="python-pipeline" class="pipeline-content hidden">
+                <h4 class="font-bold mb-3 text-blue-600">🐍 Python Flask/Django Pipeline</h4>
+                <pre class="bg-gray-900 text-green-400 p-4 rounded-lg text-sm overflow-x-auto"><code>trigger:
+  branches:
+    include:
+    - main
+    - develop
+
+variables:
+  - group: 'python-app-variables'
+  - name: 'pythonVersion'
+    value: '3.9'
+
+stages:
+- stage: Build
+  jobs:
+  - job: BuildPython
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - task: UsePythonVersion@0
+      inputs:
+        versionSpec: '$(pythonVersion)'
+    
+    - script: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pytest pytest-cov
+      displayName: 'Install dependencies'
+    
+    - script: |
+        pytest tests/ --junitxml=junit/test-results.xml --cov=. --cov-report=xml
+      displayName: 'Run tests'
+    
+    - task: PublishTestResults@2
+      inputs:
+        testResultsFiles: 'junit/test-results.xml'
+        testRunTitle: 'Python Tests'
+
+- stage: DeployDev
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/develop')
+  variables:
+    environment: 'dev'
+    flaskEnv: 'development'
+    databaseUrl: '$(DEV_DATABASE_URL)'
+    secretKey: '$(DEV_SECRET_KEY)'
+  jobs:
+  - deployment: DeployToDev
+    environment: 'dev'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureWebApp@1
+            inputs:
+              azureSubscription: '$(azureSubscription)'
+              appName: 'python-app-dev'
+              package: '$(Pipeline.Workspace)'
+
+- stage: DeployUAT
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
+  variables:
+    environment: 'uat'
+    flaskEnv: 'testing'
+    databaseUrl: '$(UAT_DATABASE_URL)'
+    secretKey: '$(UAT_SECRET_KEY)'
+  jobs:
+  - deployment: DeployToUAT
+    environment: 'uat'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureWebApp@1
+            inputs:
+              azureSubscription: '$(azureSubscription)'
+              appName: 'python-app-uat'
+              package: '$(Pipeline.Workspace)'
+
+- stage: DeployProd
+  condition: and(eq(variables['Build.SourceBranch'], 'refs/heads/main'), eq(variables['Build.Reason'], 'Manual'))
+  variables:
+    environment: 'prod'
+    flaskEnv: 'production'
+    databaseUrl: '$(PROD_DATABASE_URL)'
+    secretKey: '$(PROD_SECRET_KEY)'
+  jobs:
+  - deployment: DeployToProd
+    environment: 'prod'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureWebApp@1
+            inputs:
+              azureSubscription: '$(azureSubscription)'
+              appName: 'python-app-prod'
+              package: '$(Pipeline.Workspace)'</code></pre>
+            </div>
+
+            <!-- .NET Core Pipeline -->
+            <div id="dotnet-pipeline" class="pipeline-content hidden">
+                <h4 class="font-bold mb-3 text-purple-600">🔷 .NET Core Web API Pipeline</h4>
+                <pre class="bg-gray-900 text-green-400 p-4 rounded-lg text-sm overflow-x-auto"><code>trigger:
+  branches:
+    include:
+    - main
+    - develop
+
+variables:
+  - group: 'dotnet-app-variables'
+  - name: 'buildConfiguration'
+    value: 'Release'
+  - name: 'dotNetFramework'
+    value: 'net6.0'
+
+stages:
+- stage: Build
+  jobs:
+  - job: BuildDotNet
+    pool:
+      vmImage: 'windows-latest'
+    steps:
+    - task: UseDotNet@2
+      inputs:
+        version: '6.0.x'
+        includePreviewVersions: true
+    
+    - task: DotNetCoreCLI@2
+      displayName: 'Restore packages'
+      inputs:
+        command: 'restore'
+        projects: '**/*.csproj'
+    
+    - task: DotNetCoreCLI@2
+      displayName: 'Build application'
+      inputs:
+        command: 'build'
+        projects: '**/*.csproj'
+        arguments: '--configuration $(buildConfiguration)'
+    
+    - task: DotNetCoreCLI@2
+      displayName: 'Run unit tests'
+      inputs:
+        command: 'test'
+        projects: '**/*Tests/*.csproj'
+        arguments: '--configuration $(buildConfiguration) --collect "Code coverage"'
+    
+    - task: DotNetCoreCLI@2
+      displayName: 'Publish application'
+      inputs:
+        command: 'publish'
+        publishWebProjects: true
+        arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+
+- stage: DeployDev
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/develop')
+  variables:
+    environment: 'dev'
+    connectionString: '$(DEV_CONNECTION_STRING)'
+    apiKey: '$(DEV_API_KEY)'
+    aspNetCoreEnvironment: 'Development'
+  jobs:
+  - deployment: DeployToDev
+    environment: 'dev'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureWebApp@1
+            inputs:
+              azureSubscription: '$(azureSubscription)'
+              appName: 'dotnet-app-dev'
+              package: '$(Pipeline.Workspace)/**/*.zip'
+
+- stage: DeployUAT
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
+  variables:
+    environment: 'uat'
+    connectionString: '$(UAT_CONNECTION_STRING)'
+    apiKey: '$(UAT_API_KEY)'
+    aspNetCoreEnvironment: 'Staging'
+  jobs:
+  - deployment: DeployToUAT
+    environment: 'uat'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureWebApp@1
+            inputs:
+              azureSubscription: '$(azureSubscription)'
+              appName: 'dotnet-app-uat'
+              package: '$(Pipeline.Workspace)/**/*.zip'
+
+- stage: DeployProd
+  condition: and(eq(variables['Build.SourceBranch'], 'refs/heads/main'), eq(variables['Build.Reason'], 'Manual'))
+  variables:
+    environment: 'prod'
+    connectionString: '$(PROD_CONNECTION_STRING)'
+    apiKey: '$(PROD_API_KEY)'
+    aspNetCoreEnvironment: 'Production'
+  jobs:
+  - deployment: DeployToProd
+    environment: 'prod'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureWebApp@1
+            inputs:
+              azureSubscription: '$(azureSubscription)'
+              appName: 'dotnet-app-prod'
+              package: '$(Pipeline.Workspace)/**/*.zip'</code></pre>
+            </div>
+        </div>
+
+        <script>
+            function showPipeline(type) {
+                // Hide all pipelines
+                document.querySelectorAll('.pipeline-content').forEach(el => el.classList.add('hidden'));
+                
+                // Remove active class from all tabs
+                document.querySelectorAll('[id$="-tab"]').forEach(el => {
+                    el.classList.remove('bg-white', 'shadow', 'text-blue-600');
+                    el.classList.add('text-gray-600', 'hover:text-blue-600');
+                });
+                
+                // Show selected pipeline
+                document.getElementById(type + '-pipeline').classList.remove('hidden');
+                
+                // Add active class to selected tab
+                const activeTab = document.getElementById(type + '-tab');
+                activeTab.classList.add('bg-white', 'shadow', 'text-blue-600');
+                activeTab.classList.remove('text-gray-600', 'hover:text-blue-600');
+            }
+        </script>
+    </div>
+</body>
+</html>
