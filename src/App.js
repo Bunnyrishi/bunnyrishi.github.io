@@ -242,7 +242,7 @@ function Portfolio() {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="text-2xl font-bold text-gray-800 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-lg border border-white/30"
+              className="text-2xl font-bold text-gray-800 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-lg border border-white/40 shadow-sm"
             >
               Rishi Gupta
             </motion.div>
@@ -253,10 +253,10 @@ function Portfolio() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`px-4 py-2 rounded-lg font-bold transition-all duration-300 backdrop-blur-sm border border-white/20 ${
+                  className={`px-4 py-2 rounded-lg font-bold transition-all duration-300 backdrop-blur-sm border border-white/30 ${
                     activeSection === item.id
-                      ? 'text-blue-600 bg-white/30 shadow-inner'
-                      : 'text-gray-700 bg-white/15 hover:text-blue-600 hover:bg-white/25'
+                      ? 'text-blue-600 bg-white/90 shadow-inner'
+                      : 'text-gray-700 bg-white/70 hover:text-blue-600 hover:bg-white/80'
                   }`}
                 >
                   {item.label}
@@ -266,7 +266,7 @@ function Portfolio() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 bg-white/20 backdrop-blur-sm rounded-lg border border-white/30"
+              className="md:hidden p-2 bg-white/70 backdrop-blur-sm rounded-lg border border-white/40 shadow-sm"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <FaBars className="text-xl text-gray-800" />
@@ -284,7 +284,7 @@ function Portfolio() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left px-4 py-2 text-gray-700 bg-white/15 backdrop-blur-sm border border-white/20 hover:text-blue-600 hover:bg-white/25 rounded-lg mb-2"
+                  className="block w-full text-left px-4 py-2 text-gray-700 bg-white/70 backdrop-blur-sm border border-white/30 hover:text-blue-600 hover:bg-white/80 rounded-lg mb-2"
                 >
                   {item.label}
                 </button>
