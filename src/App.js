@@ -605,7 +605,7 @@ export default function App() {
               </div>
               <div className="flex gap-4 pt-4">
                 <a
-                  href="https://www.linkedin.com/in/devopsrishi"
+                  href="https://www.linkedin.com/in/devopsrishi?utm_source=share&utm_medium=member_desktop"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
