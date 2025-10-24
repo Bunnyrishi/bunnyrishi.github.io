@@ -288,14 +288,12 @@ function Portfolio() {
       </header>
 
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 pt-20 relative overflow-hidden">
+      <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 pt-20 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-400/30 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-pink-400/20 rounded-full blur-3xl animate-bounce"></div>
-          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-yellow-300/20 rounded-full blur-2xl animate-ping"></div>
-          <div className="absolute top-20 right-20 w-32 h-32 bg-blue-400/25 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute bottom-32 left-32 w-48 h-48 bg-green-400/15 rounded-full blur-2xl animate-bounce"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-300/20 rounded-full blur-3xl animate-bounce"></div>
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-white/15 rounded-full blur-2xl animate-ping"></div>
         </div>
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -308,13 +306,13 @@ function Portfolio() {
                 Hi, I'm <span className="bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent animate-pulse">Rishi Gupta</span>
               </h1>
               <h2 className="text-3xl md:text-4xl text-cyan-200 mb-6 font-semibold animate-bounce">⚙️ DevOps Engineer</h2>
-              <div className="flex items-center gap-4 mb-8">
-                <div className="flex -space-x-2">
-                  <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white text-sm font-bold animate-bounce">AWS</div>
-                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold animate-bounce" style={{animationDelay: '0.1s'}}>K8s</div>
-                  <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold animate-bounce" style={{animationDelay: '0.2s'}}>TF</div>
+              <div className="flex items-center gap-6 mb-8">
+                <div className="flex gap-3">
+                  <div className="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center text-white text-xs font-bold animate-bounce shadow-lg">AWS</div>
+                  <div className="w-12 h-12 bg-cyan-400 rounded-full flex items-center justify-center text-white text-xs font-bold animate-bounce shadow-lg" style={{animationDelay: '0.1s'}}>K8s</div>
+                  <div className="w-12 h-12 bg-indigo-400 rounded-full flex items-center justify-center text-white text-xs font-bold animate-bounce shadow-lg" style={{animationDelay: '0.2s'}}>TF</div>
                 </div>
-                <span className="text-cyan-200 text-lg">3+ Years Experience</span>
+                <span className="text-blue-200 text-lg font-medium">3+ Years Experience</span>
               </div>
               <p className="text-lg text-white/90 mb-8 leading-relaxed relative z-10">
                 🚀 Transforming infrastructure with cloud automation, CI/CD excellence, and scalable solutions. 
@@ -372,7 +370,7 @@ function Portfolio() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-slate-700 to-blue-600 bg-clip-text text-transparent mb-4">🚀 About Me</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">🚀 About Me</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Dynamic DevOps Engineer with 3+ years of hands-on experience in cloud infrastructure, 
               automation, and CI/CD pipeline management. Passionate about transforming traditional 
