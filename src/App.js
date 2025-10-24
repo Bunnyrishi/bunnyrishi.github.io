@@ -605,14 +605,13 @@ export default function App() {
                 </div>
               </div>
               <div className="flex gap-4 pt-4">
-                <a
-                  href="https://www.linkedin.com/pub/dir/Rishi/Gupta"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={() => navigator.clipboard.writeText('Search: Rishi Gupta DevOps Engineer on LinkedIn')}
+                  title="Click to copy LinkedIn search term"
                   className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
                 >
                   <FaLinkedin />
-                </a>
+                </button>
                 <a
                   href="https://github.com/Bunnyrishi"
                   target="_blank"
