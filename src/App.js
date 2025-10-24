@@ -388,8 +388,8 @@ function Portfolio() {
             >
               <div className="relative w-full max-w-md mx-auto">
                 <img
-                  src="https://media.giphy.com/media/RbDKaczqWovIugyJmW/giphy.gif"
-                  alt="GitHub Style Tech Animation"
+                  src="https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif"
+                  alt="Coding Animation"
                   className="w-full rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-2xl"></div>
