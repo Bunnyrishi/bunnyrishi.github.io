@@ -728,7 +728,7 @@ function Portfolio() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white">Email</h3>
-                    <a href="mailto:rishigupta1999.rg@gmail.com" className="text-cyan-200 hover:text-white font-medium">
+                    <a href="mailto:rishigupta1999.rg@gmail.com" className="text-white text-lg font-bold hover:text-cyan-200">
                       rishigupta1999.rg@gmail.com
                     </a>
                   </div>
