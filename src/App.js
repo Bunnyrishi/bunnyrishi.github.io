@@ -605,13 +605,14 @@ export default function App() {
                 </div>
               </div>
               <div className="flex gap-4 pt-4">
-                <button
-                  onClick={() => navigator.clipboard.writeText('Search: Rishi Gupta DevOps Engineer on LinkedIn')}
-                  title="Click to copy LinkedIn search term"
+                <a
+                  href="https://www.linkedin.com/in/devopsrishi?utm_source=share&utm_medium=member_desktop"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
                 >
                   <FaLinkedin />
-                </button>
+                </a>
                 <a
                   href="https://github.com/Bunnyrishi"
                   target="_blank"
