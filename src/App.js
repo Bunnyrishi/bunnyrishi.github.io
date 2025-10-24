@@ -312,7 +312,7 @@ function Portfolio() {
                   <div className="w-12 h-12 bg-cyan-400 rounded-full flex items-center justify-center text-white text-xs font-bold animate-bounce shadow-lg" style={{animationDelay: '0.1s'}}>K8s</div>
                   <div className="w-12 h-12 bg-indigo-400 rounded-full flex items-center justify-center text-white text-xs font-bold animate-bounce shadow-lg" style={{animationDelay: '0.2s'}}>TF</div>
                 </div>
-                <span className="text-blue-200 text-lg font-medium">3+ Years Experience</span>
+                <span className="text-white text-lg font-bold">3+ Years Experience</span>
               </div>
               <p className="text-lg text-white/90 mb-8 leading-relaxed relative z-10">
                 🚀 Transforming infrastructure with cloud automation, CI/CD excellence, and scalable solutions. 
