@@ -80,7 +80,7 @@ function Portfolio() {
       live: "/migration-demo.html",
       duration: "2 months",
       team: "Solo Project",
-      metrics: "20+ servers migrated, 0% downtime, 30% performance boost"
+      metrics: "20+ servers migrated, 0% downtime, 30% performance boost, 25% cost reduction"
     },
     {
       title: "DevOps Portfolio Website",
@@ -157,6 +157,17 @@ function Portfolio() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const getProjectImage = (title) => {
+    const images = {
+      'Multi-Cloud Infrastructure Automation': 'url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=200&fit=crop&crop=center")', // Cloud/Tech
+      'CI/CD Pipeline Migration': 'url("https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=400&h=200&fit=crop&crop=center")', // Code/Pipeline
+      'Kubernetes Monitoring Stack': 'url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&crop=center")', // Monitoring/Dashboard
+      'Server Migration Project': 'url("https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=200&fit=crop&crop=center")', // Server/Infrastructure
+      'DevOps Portfolio Website': 'url("https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=200&fit=crop&crop=center")' // Web Development
+    };
+    return images[title] || 'none';
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -464,7 +475,7 @@ function Portfolio() {
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 overflow-hidden"
               >
                 <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-600 relative" style={{
-                  backgroundImage: project.team === 'Solo Project' ? 'url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=200&fit=crop&crop=center")' : 'none',
+                  backgroundImage: getProjectImage(project.title),
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   backgroundBlendMode: 'overlay'
