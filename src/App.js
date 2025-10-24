@@ -288,7 +288,13 @@ function Portfolio() {
       </header>
 
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50 pt-20">
+      <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-600 via-blue-600 to-cyan-500 pt-20 relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-yellow-300/20 rounded-full blur-3xl animate-bounce"></div>
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-pink-400/10 rounded-full blur-2xl animate-ping"></div>
+        </div>
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -296,27 +302,27 @@ function Portfolio() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                Hi, I'm <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Rishi Gupta</span>
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 relative z-10">
+                Hi, I'm <span className="bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent animate-pulse">Rishi Gupta</span>
               </h1>
-              <h2 className="text-2xl md:text-3xl text-gray-700 mb-6">DevOps Engineer</h2>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Transforming infrastructure with cloud automation, CI/CD excellence, and scalable solutions. 
-                3+ years of experience in AWS, Azure, Kubernetes, and modern DevOps practices.
+              <h2 className="text-2xl md:text-3xl text-yellow-300 mb-6 font-semibold animate-bounce">⚙️ DevOps Engineer</h2>
+              <p className="text-lg text-white/90 mb-8 leading-relaxed relative z-10">
+                🚀 Transforming infrastructure with cloud automation, CI/CD excellence, and scalable solutions. 
+                ☁️ 3+ years of experience in AWS, Azure, Kubernetes, and modern DevOps practices.
               </p>
               <div className="flex flex-wrap gap-4">
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+                  className="bg-gradient-to-r from-pink-500 to-orange-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-2xl transform hover:scale-110 transition-all duration-300 animate-pulse hover:animate-none relative z-10"
                 >
-                  Contact Me
+                  💬 Contact Me
                 </button>
                 <a
                   href="/Rishi_Gupta_Resume.pdf"
                   download="Rishi_Gupta_Resume.pdf"
-                  className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 flex items-center gap-2"
+                  className="border-2 border-yellow-300 text-yellow-300 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 hover:text-purple-900 transition-all duration-300 flex items-center gap-2 relative z-10 hover:shadow-xl transform hover:scale-105"
                 >
-                  <FaDownload /> Download Resume
+                  <FaDownload /> 📄 Download Resume
                 </a>
               </div>
             </motion.div>
@@ -327,14 +333,14 @@ function Portfolio() {
               className="flex justify-center"
             >
               <div className="relative">
-                <div className="w-80 h-80 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 p-2">
+                <div className="w-80 h-80 rounded-full bg-gradient-to-br from-pink-400 via-purple-500 to-cyan-400 p-2 animate-pulse hover:animate-spin transition-all duration-1000">
                   <img
                     src="/assets/images/rishi_image.jpg"
                     alt="Rishi Gupta"
-                    className="w-full h-full object-cover rounded-full"
+                    className="w-full h-full object-cover rounded-full hover:scale-110 transition-transform duration-300"
                   />
                 </div>
-                <div className="absolute -top-4 -right-4 w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center animate-bounce">
+                <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center animate-bounce shadow-lg">
                   <span className="text-2xl">👋</span>
                 </div>
               </div>
@@ -344,7 +350,7 @@ function Portfolio() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-white">
+      <section id="about" className="py-20 bg-gradient-to-br from-cyan-50 via-blue-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -353,7 +359,7 @@ function Portfolio() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">🚀 About Me</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Dynamic DevOps Engineer with 3+ years of hands-on experience in cloud infrastructure, 
               automation, and CI/CD pipeline management. Passionate about transforming traditional 
@@ -390,21 +396,21 @@ function Portfolio() {
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-6">
-                <div className="text-center p-4 bg-blue-50 rounded-lg">
-                  <h4 className="text-2xl font-bold text-blue-600">50+</h4>
-                  <p className="text-gray-600">Successful Deployments</p>
+                <div className="text-center p-4 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg text-white transform hover:scale-105 transition-all duration-300 shadow-lg">
+                  <h4 className="text-2xl font-bold">🚀 50+</h4>
+                  <p className="text-blue-100">Successful Deployments</p>
                 </div>
-                <div className="text-center p-4 bg-purple-50 rounded-lg">
-                  <h4 className="text-2xl font-bold text-purple-600">99.9%</h4>
-                  <p className="text-gray-600">Uptime Achieved</p>
+                <div className="text-center p-4 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg text-white transform hover:scale-105 transition-all duration-300 shadow-lg">
+                  <h4 className="text-2xl font-bold">⚡ 99.9%</h4>
+                  <p className="text-purple-100">Uptime Achieved</p>
                 </div>
-                <div className="text-center p-4 bg-green-50 rounded-lg">
-                  <h4 className="text-2xl font-bold text-green-600">60%</h4>
-                  <p className="text-gray-600">Faster CI/CD Pipelines</p>
+                <div className="text-center p-4 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg text-white transform hover:scale-105 transition-all duration-300 shadow-lg">
+                  <h4 className="text-2xl font-bold">📈 60%</h4>
+                  <p className="text-green-100">Faster CI/CD Pipelines</p>
                 </div>
-                <div className="text-center p-4 bg-orange-50 rounded-lg">
-                  <h4 className="text-2xl font-bold text-orange-600">20+</h4>
-                  <p className="text-gray-600">K8s Clusters Managed</p>
+                <div className="text-center p-4 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg text-white transform hover:scale-105 transition-all duration-300 shadow-lg">
+                  <h4 className="text-2xl font-bold">⚓ 20+</h4>
+                  <p className="text-orange-100">K8s Clusters Managed</p>
                 </div>
               </div>
             </motion.div>
@@ -413,7 +419,8 @@ function Portfolio() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 bg-gray-50">
+      <section id="skills" className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -422,8 +429,8 @@ function Portfolio() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Technical Skills</h2>
-            <p className="text-lg text-gray-600">Technologies I work with</p>
+            <h2 className="text-4xl font-bold text-white mb-4 relative z-10">⚡ Technical Skills</h2>
+            <p className="text-lg text-purple-200 relative z-10">🛠️ Technologies I work with</p>
           </motion.div>
           
           <div className="grid md:grid-cols-4 gap-8">
@@ -434,7 +441,7 @@ function Portfolio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-br from-white to-gray-100 p-6 rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-110 hover:rotate-2 border-2 border-transparent hover:border-purple-300 relative z-10"
               >
                 <SkillCircle skill={skill} />
               </motion.div>
@@ -444,7 +451,7 @@ function Portfolio() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 bg-white">
+      <section id="projects" className="py-20 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -453,7 +460,7 @@ function Portfolio() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-4">🚀 Featured Projects</h2>
             <p className="text-lg text-gray-600">Some of my recent work</p>
           </motion.div>
           
@@ -465,7 +472,7 @@ function Portfolio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 overflow-hidden"
+                className="bg-white rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-rotate-1 overflow-hidden border-2 border-transparent hover:border-gradient-to-r hover:border-cyan-300"
               >
                 <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-600 relative" style={{
                   backgroundImage: getProjectImage(project.title),
@@ -519,7 +526,7 @@ function Portfolio() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-20 bg-gray-50">
+      <section id="experience" className="py-20 bg-gradient-to-br from-violet-100 via-purple-50 to-fuchsia-100">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -528,7 +535,7 @@ function Portfolio() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Work Experience</h2>
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent mb-4">💼 Work Experience</h2>
             <p className="text-lg text-gray-600">My professional journey</p>
           </motion.div>
           
@@ -540,7 +547,7 @@ function Portfolio() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300"
+                className="bg-gradient-to-br from-white to-purple-50 rounded-xl shadow-2xl p-8 hover:shadow-3xl transition-all duration-300 transform hover:scale-102 border-l-4 border-purple-500"
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
                   <div>
@@ -679,7 +686,11 @@ function Portfolio() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+      <section id="contact" className="py-20 bg-gradient-to-br from-rose-400 via-fuchsia-500 to-indigo-500 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute bottom-10 right-10 w-40 h-40 bg-yellow-300/20 rounded-full blur-2xl animate-bounce"></div>
+        </div>
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -688,8 +699,8 @@ function Portfolio() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
-            <p className="text-lg text-gray-600">Let's discuss your next project</p>
+            <h2 className="text-4xl font-bold text-white mb-4 relative z-10">💬 Get In Touch</h2>
+            <p className="text-lg text-white/90 relative z-10">🚀 Let's discuss your next project</p>
           </motion.div>
           
           <div className="grid md:grid-cols-2 gap-12">
@@ -701,8 +712,8 @@ function Portfolio() {
               className="space-y-8"
             >
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                  <FaEnvelope className="text-blue-600" />
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full flex items-center justify-center shadow-lg animate-pulse">
+                  <FaEnvelope className="text-white" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900">Email</h3>
@@ -712,8 +723,8 @@ function Portfolio() {
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                  <FaPhone className="text-green-600" />
+                <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-400 rounded-full flex items-center justify-center shadow-lg animate-pulse">
+                  <FaPhone className="text-white" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900">Phone</h3>
@@ -723,8 +734,8 @@ function Portfolio() {
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                  <FaMapMarkerAlt className="text-purple-600" />
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full flex items-center justify-center shadow-lg animate-pulse">
+                  <FaMapMarkerAlt className="text-white" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900">Location</h3>
@@ -736,7 +747,7 @@ function Portfolio() {
                   href="https://www.linkedin.com/in/devopsrishi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
+                  className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 text-white rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg animate-bounce"
                 >
                   <FaLinkedin />
                 </a>
@@ -744,7 +755,7 @@ function Portfolio() {
                   href="https://github.com/Bunnyrishi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gray-800 text-white rounded-full flex items-center justify-center hover:bg-gray-900 transition-colors"
+                  className="w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-900 text-white rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 shadow-lg animate-bounce"
                 >
                   <FaGithub />
                 </a>
@@ -756,7 +767,7 @@ function Portfolio() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-white rounded-xl shadow-lg p-8"
+              className="bg-white/90 backdrop-blur-sm rounded-xl shadow-2xl p-8 border border-white/20 relative z-10"
             >
               <form ref={form} onSubmit={handleSubmit} className="space-y-6">
                 <div>
