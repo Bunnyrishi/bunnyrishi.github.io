@@ -276,10 +276,11 @@ export default function App() {
                   Contact Me
                 </button>
                 <a
-                  href="mailto:rishigupta1999.rg@gmail.com?subject=Resume Request&body=Hi Rishi, I would like to request your resume."
+                  href="/resume.pdf"
+                  download="Rishi_Gupta_Resume.pdf"
                   className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 flex items-center gap-2"
                 >
-                  <FaDownload /> Request Resume
+                  <FaDownload /> Download Resume
                 </a>
               </div>
             </motion.div>
@@ -605,7 +606,7 @@ export default function App() {
               </div>
               <div className="flex gap-4 pt-4">
                 <a
-                  href="https://www.linkedin.com/in/devopsrishi?utm_source=share&utm_medium=member_desktop"
+                  href="https://linkedin.com/in/devopsrishi"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
