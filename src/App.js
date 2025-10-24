@@ -384,12 +384,22 @@ function Portfolio() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+              className="relative"
             >
-              <img
-                src="/assets/images/rishi_image.jpg"
-                alt="Rishi Gupta"
-                className="w-full max-w-md mx-auto rounded-2xl shadow-lg"
-              />
+              <div className="relative w-full max-w-md mx-auto">
+                <img
+                  src="https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif"
+                  alt="Coding Animation"
+                  className="w-full rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-2xl"></div>
+                <div className="absolute bottom-4 left-4 right-4 text-center">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3">
+                    <h4 className="text-lg font-bold text-gray-800">DevOps Engineer</h4>
+                    <p className="text-sm text-gray-600">Cloud & Automation Expert</p>
+                  </div>
+                </div>
+              </div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 50 }}
