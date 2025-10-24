@@ -721,35 +721,41 @@ function Portfolio() {
               viewport={{ once: true }}
               className="space-y-8"
             >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full flex items-center justify-center shadow-lg animate-pulse">
-                  <FaEnvelope className="text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white">Email</h3>
-                  <a href="mailto:rishigupta1999.rg@gmail.com" className="text-white/80 hover:text-white">
-                    rishigupta1999.rg@gmail.com
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-400 rounded-full flex items-center justify-center shadow-lg animate-pulse">
-                  <FaPhone className="text-white" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white">Phone</h3>
-                  <a href="tel:+917007509087" className="text-white/80 hover:text-white">
-                    +91 7007509087
-                  </a>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full flex items-center justify-center shadow-lg">
+                    <FaEnvelope className="text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white">Email</h3>
+                    <a href="mailto:rishigupta1999.rg@gmail.com" className="text-cyan-200 hover:text-white font-medium">
+                      rishigupta1999.rg@gmail.com
+                    </a>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full flex items-center justify-center shadow-lg animate-pulse">
-                  <FaMapMarkerAlt className="text-white" />
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-400 rounded-full flex items-center justify-center shadow-lg">
+                    <FaPhone className="text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white">Phone</h3>
+                    <a href="tel:+917007509087" className="text-green-200 hover:text-white font-medium">
+                      +91 7007509087
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white">Location</h3>
-                  <p className="text-white/80">Gurugram, Haryana, India</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full flex items-center justify-center shadow-lg">
+                    <FaMapMarkerAlt className="text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white">Location</h3>
+                    <p className="text-purple-200 font-medium">Gurugram, Haryana, India</p>
+                  </div>
                 </div>
               </div>
               <div className="flex gap-4 pt-4">
