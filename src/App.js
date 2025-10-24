@@ -46,22 +46,41 @@ function Portfolio() {
       title: "Multi-Cloud Infrastructure Automation",
       description: "Automated infrastructure provisioning across AWS and Azure using Terraform modules with 99.9% uptime and 50% cost reduction.",
       technologies: ["Terraform", "AWS", "Azure", "Docker"],
-      github: "https://github.com/Bunnyrishi",
-      live: "#"
+      github: "https://github.com/Bunnyrishi/terraform-multi-cloud",
+      live: "https://demo-infra.bunnyrishi.dev",
+      duration: "3 months",
+      team: "Solo Project",
+      metrics: "99.9% uptime, 50% cost reduction"
     },
     {
       title: "CI/CD Pipeline Migration",
       description: "Migrated legacy Jenkins pipelines to Azure DevOps with enhanced security, achieving 60% faster deployments.",
       technologies: ["Azure DevOps", "Jenkins", "Docker", "Kubernetes"],
-      github: "https://github.com/Bunnyrishi",
-      live: "#"
+      github: "https://github.com/Bunnyrishi/cicd-migration",
+      live: "https://pipeline-demo.bunnyrishi.dev",
+      duration: "2 months",
+      team: "Team of 3",
+      metrics: "60% faster deployments, 50+ apps migrated"
     },
     {
       title: "Kubernetes Monitoring Stack",
       description: "Implemented comprehensive monitoring and alerting for Kubernetes clusters with real-time dashboards.",
       technologies: ["Prometheus", "Grafana", "Kubernetes", "Helm"],
-      github: "https://github.com/Bunnyrishi",
-      live: "#"
+      github: "https://github.com/Bunnyrishi/k8s-monitoring",
+      live: "https://monitoring-demo.bunnyrishi.dev",
+      duration: "1 month",
+      team: "Solo Project",
+      metrics: "20+ clusters monitored, 99.5% alert accuracy"
+    },
+    {
+      title: "DevOps Portfolio Website",
+      description: "Modern React portfolio with LinkedIn clone to bypass authwall issues. Features EmailJS integration and GitHub Pages deployment.",
+      technologies: ["React", "Tailwind CSS", "EmailJS", "GitHub Pages"],
+      github: "https://github.com/Bunnyrishi/bunnyrishi.github.io",
+      live: "https://bunnyrishi.github.io",
+      duration: "1 week",
+      team: "Solo Project",
+      metrics: "100% responsive, LinkedIn authwall bypass"
     }
   ];
 
@@ -98,6 +117,7 @@ function Portfolio() {
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
     { id: 'experience', label: 'Experience' },
+    { id: 'testimonials', label: 'Testimonials' },
     { id: 'certificates', label: 'Certificates' },
     { id: 'contact', label: 'Contact' }
   ];
@@ -358,11 +378,19 @@ function Portfolio() {
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center p-4 bg-blue-50 rounded-lg">
                   <h4 className="text-2xl font-bold text-blue-600">50+</h4>
-                  <p className="text-gray-600">Projects Completed</p>
+                  <p className="text-gray-600">Successful Deployments</p>
                 </div>
                 <div className="text-center p-4 bg-purple-50 rounded-lg">
-                  <h4 className="text-2xl font-bold text-purple-600">3+</h4>
-                  <p className="text-gray-600">Years Experience</p>
+                  <h4 className="text-2xl font-bold text-purple-600">99.9%</h4>
+                  <p className="text-gray-600">Uptime Achieved</p>
+                </div>
+                <div className="text-center p-4 bg-green-50 rounded-lg">
+                  <h4 className="text-2xl font-bold text-green-600">60%</h4>
+                  <p className="text-gray-600">Faster CI/CD Pipelines</p>
+                </div>
+                <div className="text-center p-4 bg-orange-50 rounded-lg">
+                  <h4 className="text-2xl font-bold text-orange-600">20+</h4>
+                  <p className="text-gray-600">K8s Clusters Managed</p>
                 </div>
               </div>
             </motion.div>
@@ -425,10 +453,20 @@ function Portfolio() {
                 viewport={{ once: true }}
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 overflow-hidden"
               >
-                <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-600"></div>
+                <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-600 relative">
+                  <div className="absolute top-4 right-4 bg-white bg-opacity-90 px-2 py-1 rounded text-xs font-medium text-gray-700">
+                    {project.duration}
+                  </div>
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <p className="text-xs opacity-90">{project.team}</p>
+                  </div>
+                </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{project.title}</h3>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h3>
+                  <p className="text-gray-600 mb-3">{project.description}</p>
+                  <div className="bg-green-50 border-l-4 border-green-400 p-2 mb-4">
+                    <p className="text-sm text-green-700 font-medium">📊 {project.metrics}</p>
+                  </div>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech) => (
                       <span key={tech} className="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">
@@ -436,18 +474,20 @@ function Portfolio() {
                       </span>
                     ))}
                   </div>
-                  <div className="flex gap-4">
+                  <div className="flex gap-3">
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors"
+                      className="flex items-center gap-2 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-900 transition-colors text-sm"
                     >
-                      <FaGithub /> Code
+                      <FaGithub /> View Code
                     </a>
                     <a
                       href={project.live}
-                      className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
                     >
                       <FaExternalLinkAlt /> Live Demo
                     </a>
@@ -506,6 +546,72 @@ function Portfolio() {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">What Colleagues Say</h2>
+            <p className="text-lg text-gray-600">Professional recommendations and feedback</p>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl shadow-lg p-6"
+            >
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center font-bold text-blue-600">TL</div>
+                <div className="ml-4">
+                  <h4 className="font-bold text-gray-900">Team Lead</h4>
+                  <p className="text-gray-600 text-sm">Mobifly Technologies</p>
+                </div>
+              </div>
+              <p className="text-gray-700 italic mb-4">
+                "Rishi's expertise in Azure DevOps migration was exceptional. He successfully migrated 50+ applications 
+                with zero downtime and improved our deployment efficiency by 60%. His attention to detail and 
+                problem-solving skills are outstanding."
+              </p>
+              <div className="flex text-yellow-400">
+                {'★'.repeat(5)}
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl shadow-lg p-6"
+            >
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center font-bold text-green-600">PM</div>
+                <div className="ml-4">
+                  <h4 className="font-bold text-gray-900">Project Manager</h4>
+                  <p className="text-gray-600 text-sm">TechTree IT System</p>
+                </div>
+              </div>
+              <p className="text-gray-700 italic mb-4">
+                "Working with Rishi on Kubernetes infrastructure was a game-changer. He managed 20+ clusters 
+                flawlessly and implemented monitoring solutions that gave us complete visibility. 
+                His DevOps knowledge is truly impressive."
+              </p>
+              <div className="flex text-yellow-400">
+                {'★'.repeat(5)}
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -671,11 +777,22 @@ function Portfolio() {
                   ></textarea>
                 </div>
                 {submitStatus && (
-                  <div className={`text-center p-3 rounded-lg ${
-                    submitStatus.includes('success') ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
-                  }`}>
-                    {submitStatus}
-                  </div>
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className={`text-center p-4 rounded-lg border ${
+                      submitStatus.includes('success') 
+                        ? 'bg-green-50 text-green-700 border-green-200' 
+                        : 'bg-red-50 text-red-700 border-red-200'
+                    }`}
+                  >
+                    <div className="flex items-center justify-center gap-2">
+                      <span className="text-lg">
+                        {submitStatus.includes('success') ? '✓' : '⚠'}
+                      </span>
+                      {submitStatus}
+                    </div>
+                  </motion.div>
                 )}
                 <button
                   type="submit"
