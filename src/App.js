@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhone, FaDownload, FaExternalLinkAlt, FaTimes, FaBars, FaMapMarkerAlt } from "react-icons/fa";
 import { SiAmazonaws, SiDocker, SiKubernetes, SiTerraform, SiJenkins, SiAzuredevops, SiPrometheus, SiGrafana } from "react-icons/si";
 import emailjs from '@emailjs/browser';
+import LinkedInProfile from './LinkedInProfile';
 
-export default function App() {
+function Portfolio() {
   const [activeSection, setActiveSection] = useState('hero');
   const [selectedCert, setSelectedCert] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -606,9 +608,7 @@ export default function App() {
               </div>
               <div className="flex gap-4 pt-4">
                 <a
-                  href="https://www.linkedin.com/in/devopsrishi?utm_source=share&utm_medium=member_desktop"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/linkedin"
                   className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
                 >
                   <FaLinkedin />
@@ -727,5 +727,16 @@ export default function App() {
         </div>
       </footer>
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Portfolio />} />
+        <Route path="/linkedin" element={<LinkedInProfile />} />
+      </Routes>
+    </Router>
   );
 }
