@@ -25,8 +25,8 @@
                     <p class="text-3xl font-bold text-green-600">50+</p>
                 </div>
                 <div class="bg-blue-50 p-4 rounded-lg text-center">
-                    <h3 class="font-bold text-blue-800">Speed Improvement</h3>
-                    <p class="text-3xl font-bold text-blue-600">60%</p>
+                    <h3 class="font-bold text-blue-800">Avg Deploy Time</h3>
+                    <p class="text-3xl font-bold text-blue-600">6min</p>
                 </div>
                 <div class="bg-purple-50 p-4 rounded-lg text-center">
                     <h3 class="font-bold text-purple-800">Zero Downtime</h3>
@@ -52,7 +52,7 @@
                 <div class="bg-green-50 p-6 rounded-lg">
                     <h3 class="text-xl font-bold mb-4 text-green-800">🚀 After (Azure DevOps)</h3>
                     <ul class="space-y-2 text-green-700">
-                        <li>• Average deployment time: 18 minutes</li>
+                        <li>• Average deployment time: 6 minutes</li>
                         <li>• Fully automated pipelines</li>
                         <li>• Integrated security scanning</li>
                         <li>• Simplified maintenance</li>
@@ -120,6 +120,7 @@
                     <button onclick="showPipeline('java')" id="java-tab" class="px-4 py-2 rounded-md bg-white shadow text-blue-600 font-medium">☕ Java</button>
                     <button onclick="showPipeline('python')" id="python-tab" class="px-4 py-2 rounded-md text-gray-600 hover:text-blue-600">🐍 Python</button>
                     <button onclick="showPipeline('dotnet')" id="dotnet-tab" class="px-4 py-2 rounded-md text-gray-600 hover:text-blue-600">🔷 .NET Core</button>
+                    <button onclick="showPipeline('nodejs')" id="nodejs-tab" class="px-4 py-2 rounded-md text-gray-600 hover:text-blue-600">🚀 Node.js</button>
                 </div>
             </div>
 
@@ -434,6 +435,126 @@ stages:
               azureSubscription: '$(azureSubscription)'
               appName: 'dotnet-app-prod'
               package: '$(Pipeline.Workspace)/**/*.zip'</code></pre>
+            </div>
+
+            <!-- Node.js Pipeline -->
+            <div id="nodejs-pipeline" class="pipeline-content hidden">
+                <h4 class="font-bold mb-3 text-green-600">🚀 Node.js Express/React Pipeline</h4>
+                <pre class="bg-gray-900 text-green-400 p-4 rounded-lg text-sm overflow-x-auto"><code>trigger:
+  branches:
+    include:
+    - main
+    - develop
+
+variables:
+  - group: 'nodejs-app-variables'
+  - name: 'nodeVersion'
+    value: '18.x'
+
+stages:
+- stage: Build
+  jobs:
+  - job: BuildNodeJS
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '$(nodeVersion)'
+      displayName: 'Install Node.js'
+    
+    - script: |
+        npm ci
+        npm run build
+      displayName: 'npm install and build'
+    
+    - script: |
+        npm run test -- --coverage --watchAll=false
+      displayName: 'Run tests'
+    
+    - script: |
+        npm audit --audit-level moderate
+      displayName: 'Security audit'
+    
+    - task: PublishTestResults@2
+      condition: succeededOrFailed()
+      inputs:
+        testRunner: JUnit
+        testResultsFiles: 'junit.xml'
+    
+    - task: PublishCodeCoverageResults@1
+      inputs:
+        codeCoverageTool: Cobertura
+        summaryFileLocation: 'coverage/cobertura-coverage.xml'
+
+- stage: DeployDev
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/develop')
+  variables:
+    environment: 'dev'
+    nodeEnv: 'development'
+    apiUrl: '$(DEV_API_URL)'
+    mongoUrl: '$(DEV_MONGO_URL)'
+    jwtSecret: '$(DEV_JWT_SECRET)'
+  jobs:
+  - deployment: DeployToDev
+    environment: 'dev'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureWebApp@1
+            inputs:
+              azureSubscription: '$(azureSubscription)'
+              appType: 'webAppLinux'
+              appName: 'nodejs-app-dev'
+              package: '$(Pipeline.Workspace)'
+              runtimeStack: 'NODE|18-lts'
+
+- stage: DeployUAT
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
+  variables:
+    environment: 'uat'
+    nodeEnv: 'staging'
+    apiUrl: '$(UAT_API_URL)'
+    mongoUrl: '$(UAT_MONGO_URL)'
+    jwtSecret: '$(UAT_JWT_SECRET)'
+  jobs:
+  - deployment: DeployToUAT
+    environment: 'uat'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureWebApp@1
+            inputs:
+              azureSubscription: '$(azureSubscription)'
+              appType: 'webAppLinux'
+              appName: 'nodejs-app-uat'
+              package: '$(Pipeline.Workspace)'
+              runtimeStack: 'NODE|18-lts'
+
+- stage: DeployProd
+  condition: and(eq(variables['Build.SourceBranch'], 'refs/heads/main'), eq(variables['Build.Reason'], 'Manual'))
+  variables:
+    environment: 'prod'
+    nodeEnv: 'production'
+    apiUrl: '$(PROD_API_URL)'
+    mongoUrl: '$(PROD_MONGO_URL)'
+    jwtSecret: '$(PROD_JWT_SECRET)'
+  jobs:
+  - deployment: DeployToProd
+    environment: 'prod'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureWebApp@1
+            inputs:
+              azureSubscription: '$(azureSubscription)'
+              appType: 'webAppLinux'
+              appName: 'nodejs-app-prod'
+              package: '$(Pipeline.Workspace)'
+              runtimeStack: 'NODE|18-lts'</code></pre>
             </div>
         </div>
 
