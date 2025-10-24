@@ -236,16 +236,9 @@ function Portfolio() {
   return (
     <div className="min-h-screen bg-white">
       {/* Fixed Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-xl border-b border-white/20 shadow-lg">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-xl border-b border-gray-200 shadow-lg">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="text-2xl font-bold text-gray-800 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-lg border border-white/40 shadow-sm"
-            >
-              Rishi Gupta
-            </motion.div>
             
             {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-8">
@@ -253,10 +246,10 @@ function Portfolio() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`px-4 py-2 rounded-lg font-bold transition-all duration-300 backdrop-blur-sm border border-white/30 ${
+                  className={`px-4 py-2 rounded-lg font-bold transition-all duration-300 border ${
                     activeSection === item.id
-                      ? 'text-blue-600 bg-white/90 shadow-inner'
-                      : 'text-gray-700 bg-white/70 hover:text-blue-600 hover:bg-white/80'
+                      ? 'text-blue-600 bg-white shadow-inner border-blue-200'
+                      : 'text-gray-700 bg-white hover:text-blue-600 hover:bg-white border-gray-200'
                   }`}
                 >
                   {item.label}
@@ -266,7 +259,7 @@ function Portfolio() {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2 bg-white/70 backdrop-blur-sm rounded-lg border border-white/40 shadow-sm"
+              className="md:hidden p-2 bg-white rounded-lg border border-gray-200 shadow-sm"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <FaBars className="text-xl text-gray-800" />
@@ -278,13 +271,13 @@ function Portfolio() {
             <motion.nav
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="md:hidden mt-4 py-4 border-t"
+              className="md:hidden mt-4 py-4 border-t border-gray-200 bg-white"
             >
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left px-4 py-2 text-gray-700 bg-white/70 backdrop-blur-sm border border-white/30 hover:text-blue-600 hover:bg-white/80 rounded-lg mb-2"
+                  className="block w-full text-left px-4 py-2 text-gray-700 bg-white border border-gray-200 hover:text-blue-600 hover:bg-blue-50 rounded-lg mb-2"
                 >
                   {item.label}
                 </button>
