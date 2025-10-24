@@ -303,7 +303,7 @@ function Portfolio() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 relative z-10">
-                Hi, I'm <span className="bg-gradient-to-r from-yellow-300 to-white bg-clip-text text-transparent animate-pulse">Rishi Gupta</span>
+                Hi, I'm <span className="text-white animate-pulse">Rishi Gupta</span>
               </h1>
               <h2 className="text-2xl md:text-3xl text-sky-200 mb-6 font-semibold animate-bounce">⚙️ DevOps Engineer</h2>
               <p className="text-lg text-white/90 mb-8 leading-relaxed relative z-10">
@@ -313,14 +313,14 @@ function Portfolio() {
               <div className="flex flex-wrap gap-4">
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="bg-gradient-to-r from-sky-500 to-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-2xl transform hover:scale-110 transition-all duration-300 hover:from-sky-600 hover:to-blue-600 relative z-10"
+                  className="bg-white text-sky-800 px-8 py-3 rounded-lg font-semibold hover:shadow-2xl transform hover:scale-110 transition-all duration-300 hover:bg-sky-100 relative z-10"
                 >
                   💬 Contact Me
                 </button>
                 <a
                   href="/Rishi_Gupta_Resume.pdf"
                   download="Rishi_Gupta_Resume.pdf"
-                  className="border-2 border-sky-300 text-sky-300 px-8 py-3 rounded-lg font-semibold hover:bg-sky-300 hover:text-blue-900 transition-all duration-300 flex items-center gap-2 relative z-10 hover:shadow-xl transform hover:scale-105"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-sky-800 transition-all duration-300 flex items-center gap-2 relative z-10 hover:shadow-xl transform hover:scale-105"
                 >
                   <FaDownload /> 📄 Download Resume
                 </a>
@@ -716,8 +716,8 @@ function Portfolio() {
                   <FaEnvelope className="text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900">Email</h3>
-                  <a href="mailto:rishigupta1999.rg@gmail.com" className="text-gray-600 hover:text-blue-600">
+                  <h3 className="text-lg font-semibold text-white">Email</h3>
+                  <a href="mailto:rishigupta1999.rg@gmail.com" className="text-white/80 hover:text-white">
                     rishigupta1999.rg@gmail.com
                   </a>
                 </div>
@@ -727,8 +727,8 @@ function Portfolio() {
                   <FaPhone className="text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900">Phone</h3>
-                  <a href="tel:+917007509087" className="text-gray-600 hover:text-green-600">
+                  <h3 className="text-lg font-semibold text-white">Phone</h3>
+                  <a href="tel:+917007509087" className="text-white/80 hover:text-white">
                     +91 7007509087
                   </a>
                 </div>
@@ -738,8 +738,8 @@ function Portfolio() {
                   <FaMapMarkerAlt className="text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900">Location</h3>
-                  <p className="text-gray-600">Gurugram, Haryana, India</p>
+                  <h3 className="text-lg font-semibold text-white">Location</h3>
+                  <p className="text-white/80">Gurugram, Haryana, India</p>
                 </div>
               </div>
               <div className="flex gap-4 pt-4">
