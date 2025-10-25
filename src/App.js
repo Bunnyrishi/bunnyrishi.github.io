@@ -121,7 +121,7 @@ function Portfolio() {
     },
     {
       company: "TechTree IT System",
-      position: "DevOps Engineer",
+      position: "System Administrator",
       duration: "May 2022 - Jul 2023",
       description: "Managed AWS infrastructure, Kubernetes clusters, and Jenkins CI/CD pipelines. Enhanced monitoring with Prometheus and Grafana.",
       achievements: [
