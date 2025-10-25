@@ -97,8 +97,20 @@ function Portfolio() {
   const experiences = [
     {
       company: "Mobifly",
+      position: "DevOps Team Lead",
+      duration: "Jan 2025 - Present",
+      description: "Leading a team of 5 DevOps engineers in designing enterprise-scale cloud infrastructure. Spearheading strategic DevOps initiatives and establishing best practices across 15+ projects.",
+      achievements: [
+        "Lead team of 5 DevOps engineers in multi-cloud architecture",
+        "Optimized cloud costs by 45% through strategic resource management",
+        "Established DevSecOps culture and security-first approach",
+        "Collaborate with C-level executives on digital transformation"
+      ]
+    },
+    {
+      company: "Mobifly",
       position: "DevOps Engineer",
-      duration: "Aug 2023 - Present",
+      duration: "Aug 2023 - Dec 2024",
       description: "Led CI/CD migration from Jenkins to Azure DevOps for PwC across AWS & Azure. Automated infrastructure with Terraform and containerized deployments.",
       achievements: [
         "Migrated 50+ applications from Jenkins to Azure DevOps",
@@ -305,7 +317,7 @@ function Portfolio() {
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 relative z-10">
                 Hi, I'm <span className="bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent animate-pulse">Rishi Gupta</span>
               </h1>
-              <h2 className="text-3xl md:text-4xl text-cyan-200 mb-6 font-semibold animate-bounce">⚙️ DevOps Engineer</h2>
+              <h2 className="text-3xl md:text-4xl text-cyan-200 mb-6 font-semibold animate-bounce">⚙️ DevOps Team Lead</h2>
               <div className="flex items-center gap-6 mb-8">
                 <div className="flex gap-3">
                   <div className="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center text-white text-xs font-bold animate-bounce shadow-lg">AWS</div>
@@ -395,7 +407,7 @@ function Portfolio() {
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-2xl"></div>
                 <div className="absolute bottom-4 left-4 right-4 text-center">
                   <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3">
-                    <h4 className="text-lg font-bold text-gray-800">DevOps Engineer</h4>
+                    <h4 className="text-lg font-bold text-gray-800">DevOps Team Lead</h4>
                     <p className="text-sm text-gray-600">Cloud & Automation Expert</p>
                   </div>
                 </div>
